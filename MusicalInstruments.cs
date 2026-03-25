@@ -10,6 +10,8 @@ namespace InheritanceMod
 {    
     public enum InstrumentsType { electronic, acoustic };
     public class Instruments {
+        public static Random rnd = new Random();
+
         public InstrumentsType type = InstrumentsType.acoustic;
         public virtual string GetInfo()
         {
@@ -38,8 +40,6 @@ namespace InheritanceMod
         {
             var scale = ScaleType.standard;
 
-            var rnd = new Random();
-
             switch (rnd.Next() % 3) {
                 case 0:
                     scale = ScaleType.standard;
@@ -56,7 +56,6 @@ namespace InheritanceMod
         }
         public static Strings Generate()
         {
-            var rnd = new Random();
             return new Strings
             {
                 type = rnd.Next() % 2 == 0 ? InstrumentsType.electronic : InstrumentsType.acoustic,
@@ -82,7 +81,6 @@ namespace InheritanceMod
         }
         public static Keyboard Generate()
         {
-            var rnd = new Random();
             return new Keyboard
             {
                 type = rnd.Next() % 2 == 0 ? InstrumentsType.electronic : InstrumentsType.acoustic,
@@ -106,14 +104,35 @@ namespace InheritanceMod
             str += base.GetInfo();
             return str;
         }
+        public static DrumSizeType GeneratSize()
+        {
+            var size = DrumSizeType.kick;
+
+            switch (rnd.Next() % 4)
+            {
+                case 0:
+                    size = DrumSizeType.kick;
+                    break;
+                case 1:
+                    size = DrumSizeType.snare;
+                    break;
+                case 2:
+                    size = DrumSizeType.tom;
+                    break;
+                case 3:
+                    size = DrumSizeType.hat;
+                    break;
+            }
+
+            return size;
+        }
         public static Drum Generate()
         {
-            var rnd = new Random();
             return new Drum
             {
                 type = rnd.Next() % 2 == 0 ? InstrumentsType.electronic : InstrumentsType.acoustic,
                 radius = rnd.Next() % 101,
-                size 
+                size = GeneratSize()
             };
         }
     }

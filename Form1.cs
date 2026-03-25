@@ -20,22 +20,13 @@ namespace InheritanceMod
                 switch(random.Next() % 3)
                 {
                     case 0:
-                        this.instrumentsList.Add(new Strings
-                        {
-                            amountStrings = random.Next() % 101
-                        });
+                        this.instrumentsList.Add(Strings.Generate());
                         break;
                     case 1:
-                        this.instrumentsList.Add(new Keyboard
-                        {
-                            amountOctaves = random.Next() % 101
-                        });
+                        this.instrumentsList.Add(Keyboard.Generate());
                         break;
                     case 2:
-                        this.instrumentsList.Add(new Drum
-                        {
-                            radius = random.Next() % 101
-                        });
+                        this.instrumentsList.Add(Drum.Generate());
                         break;
                 }
             }
@@ -66,6 +57,16 @@ namespace InheritanceMod
             txtInfo.Text = "Стрн\tКлвш\tБрбн";
             txtInfo.Text += "\n";
             txtInfo.Text += String.Format("{0}\t{1}\t{2}", strings, keyboards, drums);
+
+            if (instrumentsList.Count == 0)
+            {
+                listOut.Text = "Следующий инстр: -";
+            }
+            else
+            {
+                listOut.Text = "Следующий инстр:" + instrumentsList[0].GetInfo();
+            }
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
