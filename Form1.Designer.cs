@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             button1 = new Button();
-            richTextBox1 = new RichTextBox();
+            txtInfo = new RichTextBox();
             richTextBox2 = new RichTextBox();
             button2 = new Button();
             SuspendLayout();
@@ -38,45 +38,46 @@
             // 
             button1.Location = new Point(12, 12);
             button1.Name = "button1";
-            button1.Size = new Size(178, 23);
+            button1.Size = new Size(146, 23);
             button1.TabIndex = 0;
             button1.Text = "Перезаполнить";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
-            // richTextBox1
+            // txtInfo
             // 
-            richTextBox1.Location = new Point(12, 41);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(178, 96);
-            richTextBox1.TabIndex = 1;
-            richTextBox1.Text = "";
+            txtInfo.Location = new Point(12, 41);
+            txtInfo.Name = "txtInfo";
+            txtInfo.Size = new Size(146, 54);
+            txtInfo.TabIndex = 1;
+            txtInfo.Text = "";
             // 
             // richTextBox2
             // 
-            richTextBox2.Location = new Point(12, 143);
+            richTextBox2.Location = new Point(12, 101);
             richTextBox2.Name = "richTextBox2";
-            richTextBox2.Size = new Size(114, 96);
+            richTextBox2.Size = new Size(82, 96);
             richTextBox2.TabIndex = 2;
             richTextBox2.Text = "";
             // 
             // button2
             // 
-            button2.Location = new Point(132, 143);
+            button2.Location = new Point(100, 101);
             button2.Name = "button2";
             button2.Size = new Size(58, 96);
             button2.TabIndex = 3;
             button2.Text = "Взять";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(169, 208);
             Controls.Add(button2);
             Controls.Add(richTextBox2);
-            Controls.Add(richTextBox1);
+            Controls.Add(txtInfo);
             Controls.Add(button1);
             Name = "Form1";
             Text = "Form1";
@@ -86,7 +87,7 @@
         #endregion
 
         private Button button1;
-        private RichTextBox richTextBox1;
+        private RichTextBox txtInfo;
         private RichTextBox richTextBox2;
         private Button button2;
     }

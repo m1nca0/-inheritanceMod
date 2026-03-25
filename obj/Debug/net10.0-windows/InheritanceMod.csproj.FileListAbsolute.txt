@@ -1,0 +1,17 @@
+C:\Users\vasilyevmi\Desktop\ВУЗ\tech\InheritanceMod\InheritanceMod\bin\Debug\net10.0-windows\InheritanceMod.exe
+C:\Users\vasilyevmi\Desktop\ВУЗ\tech\InheritanceMod\InheritanceMod\bin\Debug\net10.0-windows\InheritanceMod.deps.json
+C:\Users\vasilyevmi\Desktop\ВУЗ\tech\InheritanceMod\InheritanceMod\bin\Debug\net10.0-windows\InheritanceMod.runtimeconfig.json
+C:\Users\vasilyevmi\Desktop\ВУЗ\tech\InheritanceMod\InheritanceMod\bin\Debug\net10.0-windows\InheritanceMod.dll
+C:\Users\vasilyevmi\Desktop\ВУЗ\tech\InheritanceMod\InheritanceMod\bin\Debug\net10.0-windows\InheritanceMod.pdb
+C:\Users\vasilyevmi\Desktop\ВУЗ\tech\InheritanceMod\InheritanceMod\obj\Debug\net10.0-windows\InheritanceMod.Form1.resources
+C:\Users\vasilyevmi\Desktop\ВУЗ\tech\InheritanceMod\InheritanceMod\obj\Debug\net10.0-windows\InheritanceMod.csproj.GenerateResource.cache
+C:\Users\vasilyevmi\Desktop\ВУЗ\tech\InheritanceMod\InheritanceMod\obj\Debug\net10.0-windows\InheritanceMod.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vasilyevmi\Desktop\ВУЗ\tech\InheritanceMod\InheritanceMod\obj\Debug\net10.0-windows\InheritanceMod.AssemblyInfoInputs.cache
+C:\Users\vasilyevmi\Desktop\ВУЗ\tech\InheritanceMod\InheritanceMod\obj\Debug\net10.0-windows\InheritanceMod.AssemblyInfo.cs
+C:\Users\vasilyevmi\Desktop\ВУЗ\tech\InheritanceMod\InheritanceMod\obj\Debug\net10.0-windows\InheritanceMod.csproj.CoreCompileInputs.cache
+C:\Users\vasilyevmi\Desktop\ВУЗ\tech\InheritanceMod\InheritanceMod\obj\Debug\net10.0-windows\InheritanceMod.sourcelink.json
+C:\Users\vasilyevmi\Desktop\ВУЗ\tech\InheritanceMod\InheritanceMod\obj\Debug\net10.0-windows\InheritanceMod.dll
+C:\Users\vasilyevmi\Desktop\ВУЗ\tech\InheritanceMod\InheritanceMod\obj\Debug\net10.0-windows\refint\InheritanceMod.dll
+C:\Users\vasilyevmi\Desktop\ВУЗ\tech\InheritanceMod\InheritanceMod\obj\Debug\net10.0-windows\InheritanceMod.pdb
+C:\Users\vasilyevmi\Desktop\ВУЗ\tech\InheritanceMod\InheritanceMod\obj\Debug\net10.0-windows\InheritanceMod.genruntimeconfig.cache
+C:\Users\vasilyevmi\Desktop\ВУЗ\tech\InheritanceMod\InheritanceMod\obj\Debug\net10.0-windows\ref\InheritanceMod.dll
