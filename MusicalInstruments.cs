@@ -7,29 +7,64 @@ using System.Text;
 //Клавишные (количество клавиш, количество полных октав)
 //Барабан (радиус, тип (большой, малый и т.п.))
 namespace InheritanceMod
-{
+{    
+    public enum InstrumentsType { electronic, acoustic };
     public class Instruments {
+        public InstrumentsType type = InstrumentsType.acoustic;
         public virtual string GetInfo()
         {
-            return "инструмент";
+            
+            var str = String.Format("\nТип: {0}", this.type);
+            return str;
         }
+   
     }
-    public enum InstrumentsType { electronic, acoustic };
+
     public enum ScaleType { standard, down, open };
     public class Strings : Instruments
     {
         public int amountStrings = 0;
         public ScaleType scale = ScaleType.standard;
-        public InstrumentsType type = InstrumentsType.acoustic;
 
         public override String GetInfo()
         {
             var str = "Тебе выпала скрипка";
             str += String.Format("\nКоличество струн: {0}", this.amountStrings);
             str += String.Format("\nСтрой: {0}", this.scale);
-            str += String.Format("\nТип: {0}", this.type);
+            str += base.GetInfo();
             return str;
         }
+        public static ScaleType GeneratScale ()
+        {
+            var scale = ScaleType.standard;
+
+            var rnd = new Random();
+
+            switch (rnd.Next() % 3) {
+                case 0:
+                    scale = ScaleType.standard;
+                    break;
+                case 1:
+                    scale = ScaleType.down;
+                    break;
+                case 2:
+                    scale = ScaleType.open;
+                    break;
+            }
+
+            return scale;
+        }
+        public static Strings Generate()
+        {
+            var rnd = new Random();
+            return new Strings
+            {
+                type = rnd.Next() % 2 == 0 ? InstrumentsType.electronic : InstrumentsType.acoustic,
+                amountStrings = rnd.Next() % 101,
+                scale = GeneratScale()
+            };
+        }
+
     }
     public class Keyboard : Instruments
     {
@@ -42,8 +77,18 @@ namespace InheritanceMod
             var str = "Тебе выпала пианина";
             str += String.Format("\nКоличество клавиш: {0}", this.amountKeys);
             str += String.Format("\nКоличество октав: {0}", this.amountOctaves);
-            str += String.Format("\nТип: {0}", this.type);
+            str += base.GetInfo();
             return str;
+        }
+        public static Keyboard Generate()
+        {
+            var rnd = new Random();
+            return new Keyboard
+            {
+                type = rnd.Next() % 2 == 0 ? InstrumentsType.electronic : InstrumentsType.acoustic,
+                amountKeys = rnd.Next() % 101,
+                amountOctaves = rnd.Next() % 101
+            };
         }
     }
     public enum DrumSizeType { snare, kick, tom, hat };
@@ -53,13 +98,23 @@ namespace InheritanceMod
         public DrumSizeType size = DrumSizeType.kick;
         public InstrumentsType type = InstrumentsType.acoustic;
 
-        public override String GetInfo()
+        public override string GetInfo()
         {
             var str = "Тебе выпала барабанна";
             str += String.Format("\nРадиус: {0}", this.radius);
             str += String.Format("\nВид: {0}", this.size);
-            str += String.Format("\nТип: {0}", this.type);
+            str += base.GetInfo();
             return str;
+        }
+        public static Drum Generate()
+        {
+            var rnd = new Random();
+            return new Drum
+            {
+                type = rnd.Next() % 2 == 0 ? InstrumentsType.electronic : InstrumentsType.acoustic,
+                radius = rnd.Next() % 101,
+                size 
+            };
         }
     }
 
