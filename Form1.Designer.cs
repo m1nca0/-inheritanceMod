@@ -30,7 +30,7 @@
         {
             button1 = new Button();
             txtInfo = new RichTextBox();
-            richTextBox2 = new RichTextBox();
+            txtOut = new RichTextBox();
             button2 = new Button();
             SuspendLayout();
             // 
@@ -52,13 +52,13 @@
             txtInfo.TabIndex = 1;
             txtInfo.Text = "";
             // 
-            // richTextBox2
+            // txtOut
             // 
-            richTextBox2.Location = new Point(12, 101);
-            richTextBox2.Name = "richTextBox2";
-            richTextBox2.Size = new Size(82, 96);
-            richTextBox2.TabIndex = 2;
-            richTextBox2.Text = "";
+            txtOut.Location = new Point(12, 101);
+            txtOut.Name = "txtOut";
+            txtOut.Size = new Size(82, 96);
+            txtOut.TabIndex = 2;
+            txtOut.Text = "";
             // 
             // button2
             // 
@@ -76,7 +76,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(169, 208);
             Controls.Add(button2);
-            Controls.Add(richTextBox2);
+            Controls.Add(txtOut);
             Controls.Add(txtInfo);
             Controls.Add(button1);
             Name = "Form1";
@@ -88,7 +88,7 @@
 
         private Button button1;
         private RichTextBox txtInfo;
-        private RichTextBox richTextBox2;
+        private RichTextBox txtOut;
         private Button button2;
     }
 }

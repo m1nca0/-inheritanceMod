@@ -12,9 +12,23 @@ namespace InheritanceMod
         private void button1_Click(object sender, EventArgs e)
         {
             this.instrumentsList.Clear();
+
+            var random = new Random();
+
             for (var i = 0; i < 10; i++)
             {
-                this.instrumentsList.Add(new Keyboard());
+                switch(random.Next() % 3)
+                {
+                    case 0:
+                        this.instrumentsList.Add(new Strings());
+                        break;
+                    case 1:
+                        this.instrumentsList.Add(new Keyboard());
+                        break;
+                    case 2:
+                        this.instrumentsList.Add(new Drum());
+                        break;
+                }
             }
             ShowInfo();
         }
@@ -47,7 +61,17 @@ namespace InheritanceMod
 
         private void button2_Click(object sender, EventArgs e)
         {
+            if (this.instrumentsList.Count == 0)
+            {
+                txtOut.Text = "Пусто(";
+                return;
+            }
 
+            var instrument = this.instrumentsList[0];
+
+            this.instrumentsList.RemoveAt(0);
+            txtOut.Text = instrument.GetInfo();
+            ShowInfo();
         }
     }
 }

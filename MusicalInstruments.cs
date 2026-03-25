@@ -8,7 +8,12 @@ using System.Text;
 //Барабан (радиус, тип (большой, малый и т.п.))
 namespace InheritanceMod
 {
-    public class Instruments { }
+    public class Instruments {
+        public virtual string GetInfo()
+        {
+            return "инструмент";
+        }
+    }
     public enum InstrumentsType { electronic, acoustic };
     public enum ScaleType { standard, down, open };
     public class Strings : Instruments
@@ -16,12 +21,22 @@ namespace InheritanceMod
         public int amountStrings = 0;
         public ScaleType scale = ScaleType.standard;
         public InstrumentsType type = InstrumentsType.acoustic;
+
+        public override String GetInfo()
+        {
+            return "Струнные";
+        }
     }
     public class Keyboard : Instruments
     {
         public int amountKeys = 0;
         public int amountOctaves = 0;
         public InstrumentsType type = InstrumentsType.electronic;
+
+        public override String GetInfo()
+        {
+            return "Клавиши";
+        }
     }
     public enum DrumSizeType { snare, kick, tom, hat };
     public class Drum : Instruments
@@ -29,6 +44,11 @@ namespace InheritanceMod
         public int radius = 0;
         public DrumSizeType size = DrumSizeType.kick;
         public InstrumentsType type = InstrumentsType.acoustic;
+
+        public override String GetInfo()
+        {
+            return "Барабабы";
+        }
     }
 
 }
