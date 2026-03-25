@@ -38,7 +38,7 @@
             // 
             button1.Location = new Point(12, 12);
             button1.Name = "button1";
-            button1.Size = new Size(146, 23);
+            button1.Size = new Size(271, 23);
             button1.TabIndex = 0;
             button1.Text = "Перезаполнить";
             button1.UseVisualStyleBackColor = true;
@@ -48,7 +48,7 @@
             // 
             txtInfo.Location = new Point(12, 41);
             txtInfo.Name = "txtInfo";
-            txtInfo.Size = new Size(146, 54);
+            txtInfo.Size = new Size(271, 54);
             txtInfo.TabIndex = 1;
             txtInfo.Text = "";
             // 
@@ -56,13 +56,13 @@
             // 
             txtOut.Location = new Point(12, 101);
             txtOut.Name = "txtOut";
-            txtOut.Size = new Size(82, 96);
+            txtOut.Size = new Size(207, 96);
             txtOut.TabIndex = 2;
             txtOut.Text = "";
             // 
             // button2
             // 
-            button2.Location = new Point(100, 101);
+            button2.Location = new Point(225, 100);
             button2.Name = "button2";
             button2.Size = new Size(58, 96);
             button2.TabIndex = 3;
@@ -74,7 +74,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(169, 208);
+            ClientSize = new Size(295, 208);
             Controls.Add(button2);
             Controls.Add(txtOut);
             Controls.Add(txtInfo);

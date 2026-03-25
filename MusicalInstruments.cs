@@ -24,7 +24,11 @@ namespace InheritanceMod
 
         public override String GetInfo()
         {
-            return "Струнные";
+            var str = "Тебе выпала скрипка";
+            str += String.Format("\nКоличество струн: {0}", this.amountStrings);
+            str += String.Format("\nСтрой: {0}", this.scale);
+            str += String.Format("\nТип: {0}", this.type);
+            return str;
         }
     }
     public class Keyboard : Instruments
@@ -35,7 +39,11 @@ namespace InheritanceMod
 
         public override String GetInfo()
         {
-            return "Клавиши";
+            var str = "Тебе выпала пианина";
+            str += String.Format("\nКоличество клавиш: {0}", this.amountKeys);
+            str += String.Format("\nКоличество октав: {0}", this.amountOctaves);
+            str += String.Format("\nТип: {0}", this.type);
+            return str;
         }
     }
     public enum DrumSizeType { snare, kick, tom, hat };
@@ -47,7 +55,11 @@ namespace InheritanceMod
 
         public override String GetInfo()
         {
-            return "Барабабы";
+            var str = "Тебе выпала барабанна";
+            str += String.Format("\nРадиус: {0}", this.radius);
+            str += String.Format("\nВид: {0}", this.size);
+            str += String.Format("\nТип: {0}", this.type);
+            return str;
         }
     }
 
