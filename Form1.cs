@@ -20,13 +20,22 @@ namespace InheritanceMod
                 switch(random.Next() % 3)
                 {
                     case 0:
-                        this.instrumentsList.Add(new Strings());
+                        this.instrumentsList.Add(new Strings
+                        {
+                            amountStrings = random.Next() % 101
+                        });
                         break;
                     case 1:
-                        this.instrumentsList.Add(new Keyboard());
+                        this.instrumentsList.Add(new Keyboard
+                        {
+                            amountOctaves = random.Next() % 101
+                        });
                         break;
                     case 2:
-                        this.instrumentsList.Add(new Drum());
+                        this.instrumentsList.Add(new Drum
+                        {
+                            radius = random.Next() % 101
+                        });
                         break;
                 }
             }
