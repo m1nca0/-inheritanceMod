@@ -53,8 +53,8 @@ namespace InheritanceMod
                     drums++;
                 }
             }
-
-            txtInfo.Text = "Стрн\tКлвш\tБрбн";
+    
+                txtInfo.Text = "Стрн\tКлвш\tБрбн";
             txtInfo.Text += "\n";
             txtInfo.Text += String.Format("{0}\t{1}\t{2}", strings, keyboards, drums);
 

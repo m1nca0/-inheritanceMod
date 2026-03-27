@@ -57,6 +57,7 @@
             // 
             txtOut.Location = new Point(12, 202);
             txtOut.Name = "txtOut";
+            txtOut.ReadOnly = true;
             txtOut.Size = new Size(306, 96);
             txtOut.TabIndex = 2;
             txtOut.Text = "";
@@ -75,6 +76,7 @@
             // 
             listOut.Location = new Point(12, 100);
             listOut.Name = "listOut";
+            listOut.ReadOnly = true;
             listOut.Size = new Size(370, 96);
             listOut.TabIndex = 4;
             listOut.Text = "";
